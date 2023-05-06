@@ -38,18 +38,17 @@ st.text('PGA= '+ str(np.round(PGA,2)) +'  cm/s2')
 st.text('PGV= '+ str(np.round(PGV,2)) +'  cm/s')
 
 PSAs=np.exp(models.predict(x)[0][2:])
-print(PSAs)
 
-PSAs= pd.DataFrame()
-PSAs['PSAs']=PSAs
-PSAs['T']=['0.03','0.05','0.075','0.1','0.15','0.2','0.25','0.3','0.4','0.5','0.75','1.0','1.5','2.0']
-PSAs.sort_values(by=["T"], inplace = True) 
-PSAs.reset_index(drop=True,inplace=True)
+PSAs_df= pd.DataFrame()
+PSAs_df['PSAs']=PSAs
+PSAs_df['T']=['0.03','0.05','0.075','0.1','0.15','0.2','0.25','0.3','0.4','0.5','0.75','1.0','1.5','2.0']
+PSAs_df.sort_values(by=["T"], inplace = True) 
+PSAs_df.reset_index(drop=True,inplace=True)
 
 fig, ax = plt.subplots(figsize=(8,2))
 ax.set_xscale('log')
 ax.set_yscale('log')
-ax.plot([0,0],[10,10],color='k') #PSAs['T'],PSAs['PSAs']
+ax.plot(PSAs_df['T'],PSAs_df['PSAs'],color='k')
 plt.xlabel('T (s)')
 plt.ylabel(r'$PSA\ (cm/s^2)$')
 plt.xlim(0.01,2)
@@ -64,7 +63,7 @@ st.image(image)
 
 def convert_df(df):
     return df.to_csv().encode('utf-8')
-csv = convert_df(PSAs)
+csv = convert_df(PSAs_df)
 
 st.download_button(
     label="Download data as CSV",
