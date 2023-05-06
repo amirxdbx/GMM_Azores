@@ -49,7 +49,7 @@ PSAs.reset_index(drop=True,inplace=True)
 fig, ax = plt.subplots(figsize=(8,2))
 ax.set_xscale('log')
 ax.set_yscale('log')
-ax.plot(PSAs['T'],PSAs['PSAs'],color='k')
+ax.plot([0,0],[10,10],color='k') #PSAs['T'],PSAs['PSAs']
 plt.xlabel('T (s)')
 plt.ylabel(r'$PSA\ (cm/s^2)$')
 plt.xlim(0.01,2)
