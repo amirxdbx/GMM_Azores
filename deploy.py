@@ -41,7 +41,7 @@ PSAs=np.exp(models.predict(x)[0][2:])
 
 PSAs_df= pd.DataFrame()
 PSAs_df['PSAs']=PSAs
-PSAs_df['T']=['0.03','0.05','0.075','0.1','0.15','0.2','0.25','0.3','0.4','0.5','0.75','1.0','1.5','2.0']
+PSAs_df['T']=[0.03,0.05,0.075,0.1,0.15,0.2,0.25,0.3,0.4,0.5,0.75,1.0,1.5,2.0]
 PSAs_df.sort_values(by=["T"], inplace = True) 
 PSAs_df.reset_index(drop=True,inplace=True)
 
