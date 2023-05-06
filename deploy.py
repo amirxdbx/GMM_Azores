@@ -11,7 +11,7 @@ import joblib
 
 def model():
     model=pickle.load(open(f'All_targets.sav', 'rb'))
-    return model
+    return models
        
 model='Xgboost'
 st.title("""
@@ -35,13 +35,13 @@ st.sidebar.markdown("---")
 
 ###############################################################
 st.title('Outputs:')
-PGA_model=model()
-PGA=np.exp(PGA_model.predict(x)[0][0])
-PGV=np.exp(PGA_model.predict(x)[0][1])
+models=model()
+PGA=np.exp(models.predict(x)[0][0])
+PGV=np.exp(models.predict(x)[0][1])
 st.text('PGA= '+ str(np.round(PGA,2)) +'  cm/s2')
 st.text('PGV= '+ str(np.round(PGV,2)) +'  cm/s')
 
-PSAs=np.exp(PGA_model.predict(x)[0][2:])
+PSAs=np.exp(models.predict(x)[0][2:])
 
 
 PSAs= pd.DataFrame()
