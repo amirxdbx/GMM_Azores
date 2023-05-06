@@ -14,7 +14,7 @@ def model():
        
 st.title("""Ground motion model This app predicts the **geometric mean of ground motion intensities** """)
 
-st.sidebar.image("logo.png",width=120)
+st.image("logo.png",width=120)
 st.sidebar.title('Define your input')
 
 Mw = st.sidebar.slider("Mw",min_value=5.0, value=6.0,max_value=6.8,step=0.1, help="Please enter a value between 5.0 and 6.8")
