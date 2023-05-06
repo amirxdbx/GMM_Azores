@@ -38,21 +38,21 @@ st.text('PGA= '+ str(np.round(PGA,2)) +'  cm/s2')
 st.text('PGV= '+ str(np.round(PGV,2)) +'  cm/s')
 
 PSAs=np.exp(models.predict(x)[0][2:])
-
+print(PSAs)
 
 PSAs= pd.DataFrame()
 PSAs['PSAs']=PSAs
 PSAs['T']=['0.03','0.05','0.075','0.1','0.15','0.2','0.25','0.3','0.4','0.5','0.75','1.0','1.5','2.0']
 PSAs.sort_values(by=["T"], inplace = True) 
 PSAs.reset_index(drop=True,inplace=True)
-
+print(PSAs)
 fig, ax = plt.subplots(figsize=(8,2))
 ax.set_xscale('log')
 ax.set_yscale('log')
-ax.plot(PSAs['PSAs'],color='k')
+ax.plot(PSAs['T'],PSAs['PSAs'],color='k')
 plt.xlabel('T (s)')
 plt.ylabel(r'$PSA\ (cm/s^2)$')
-plt.xlim(0.01,3.5)
+plt.xlim(0.01,2)
 plt.ylim(0,1000)
 plt.grid(which='both')
 plt.savefig('sprectra.png',dpi=600,bbox_inches='tight',pad_inches=0.05)
