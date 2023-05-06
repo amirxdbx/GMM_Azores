@@ -13,7 +13,6 @@ def model():
     model=pickle.load(open(f'All_targets.sav', 'rb'))
     return models
        
-model='Xgboost'
 st.title("""
 Ground motion model 
 This app predicts the **geometric mean of ground motion intensities** 
