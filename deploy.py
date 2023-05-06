@@ -45,7 +45,7 @@ PSAs['PSAs']=PSAs
 PSAs['T']=['0.03','0.05','0.075','0.1','0.15','0.2','0.25','0.3','0.4','0.5','0.75','1.0','1.5','2.0']
 PSAs.sort_values(by=["T"], inplace = True) 
 PSAs.reset_index(drop=True,inplace=True)
-print(PSAs)
+
 fig, ax = plt.subplots(figsize=(8,2))
 ax.set_xscale('log')
 ax.set_yscale('log')
