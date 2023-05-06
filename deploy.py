@@ -14,7 +14,6 @@ def model():
        
 st.title("""Ground motion model This app predicts the **geometric mean of ground motion intensities** """)
 
-st.image("logo.png",width=120)
 st.sidebar.title('Define your input')
 
 Mw = st.sidebar.slider("Mw",min_value=5.0, value=6.0,max_value=6.8,step=0.1, help="Please enter a value between 5.0 and 6.8")
@@ -25,6 +24,8 @@ FD = st.sidebar.slider("Focal Depth",min_value=5.0, value=10.0,max_value=17.3,st
 x=pd.DataFrame({'Mw':[Mw],'RJB':[RJB],'Focal Depth':[FD]})
 st.title('Summary of your inputs:')
 st.write(x)
+
+st.sidebar.image("logo.png",width=120)
 st.sidebar.markdown("Made by [Amirhossein Mohammadi](https://www.linkedin.com/in/amir-hossein-mohammadi-86729957/)")
 st.sidebar.markdown("---")
 
