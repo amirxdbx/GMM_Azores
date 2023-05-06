@@ -10,7 +10,7 @@ import joblib
 @st.cache(allow_output_mutation=True)
 
 def model():
-    model=pickle.load(open(f'Tuned_models/All_targets.sav', 'rb'))
+    model=pickle.load(open(f'All_targets.sav', 'rb'))
     return model
        
 model='Xgboost'
@@ -27,7 +27,7 @@ RJB = st.sidebar.slider("RJB",min_value=0, value=30,max_value=148,step=1, help="
 FD = st.sidebar.slider("Focal Depth",min_value=5, value=10,max_value=17.35,step=1, help="Please enter a value between 5 and 17.35 km")
 
     
-x=pd.DataFrame({'Mw':[Mw],'Focal Depth':[FD],'RJB':[RJB]})
+x=pd.DataFrame({'Mw':[Mw],'RJB':[RJB],'Focal Depth':[FD]})
 st.title('Summary of your inputs:')
 st.write(x)
 st.sidebar.markdown("Made by [Amirhossein Mohammadi](https://www.linkedin.com/in/amir-hossein-mohammadi-86729957/)")
