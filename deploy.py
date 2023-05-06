@@ -12,7 +12,9 @@ def model():
     models=pickle.load(open(f'All_targets.sav', 'rb'))
     return models
        
-st.title("""Ground motion model This app predicts the **geometric mean of ground motion intensities** """)
+st.title("""Ground motion model 
+This app predicts the 
+**geometric mean of ground motion intensities** """)
 
 st.sidebar.title('Define your input')
 
