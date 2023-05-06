@@ -10,13 +10,10 @@ import joblib
 @st.cache(allow_output_mutation=True)
 
 def model():
-    model=pickle.load(open(f'All_targets.sav', 'rb'))
+    models=pickle.load(open(f'All_targets.sav', 'rb'))
     return models
        
-st.title("""
-Ground motion model 
-This app predicts the **geometric mean of ground motion intensities** 
-""")
+st.title("""Ground motion model This app predicts the **geometric mean of ground motion intensities** """)
 
 st.sidebar.image("logo.png",width=30)
 st.sidebar.title('Define your input')
