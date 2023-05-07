@@ -5,7 +5,18 @@ import streamlit as st
 import pickle
 import os
 
-     
+m=st.markdown(“””
+
+<style>
+
+div.stp {
+
+font-size:40px;
+
+}
+
+</style>”””,unsafe_allow_html=True)
+
 @st.cache(allow_output_mutation=True)
 
 def model():
