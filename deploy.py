@@ -14,7 +14,7 @@ def model():
        
 st.title("""Backbone Ground Motion Model for Azores Plateau (KMSCL23)
 This app predicts the 
-**"PGA, PGV, and Response spectra (5% damping) for the horizontal componenet of ground motion records in bedrock"** """)
+**"PGA, PGV, and Response Spectra (5% damping) for the horizontal componenet of ground motion records in bedrock"** """)
 
 st.sidebar.title('Define your input')
 
