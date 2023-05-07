@@ -9,7 +9,6 @@ st.markdown(""" <style> .font {font-size:20px ; color: #000000;}
 </style> """, unsafe_allow_html=True)
 
 @st.cache(allow_output_mutation=True)
-
 def model():
     models=pickle.load(open(f'All_targets.sav', 'rb'))
     return models
