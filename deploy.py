@@ -5,9 +5,8 @@ import streamlit as st
 import pickle
 import os
 
-st.markdown(""" <style> .font {font-size:50px ; font-family: 'Cooper Black'; color: #FF9633;} 
+st.markdown(""" <style> .font {font-size:20px ; font-family: 'Cooper Black'; color: #FFFFFF;} 
 </style> """, unsafe_allow_html=True)
-st.markdown('<p class="font">Guess the object Names</p>', unsafe_allow_html=True)
 
 @st.cache(allow_output_mutation=True)
 
@@ -15,9 +14,9 @@ def model():
     models=pickle.load(open(f'All_targets.sav', 'rb'))
     return models
        
-st.title("""Backbone Ground Motion Model for Azores Plateau (KMSCL23)
-This app predicts the 
-**"PGA, PGV, and PSA (5% damping) for the horizontal componenet of ground motion records in bedrock"** """)
+st.title("""Backbone Ground Motion Model for Azores Plateau (KMSCL23)""")
+
+st.markdown('<p class="font">This app predicts the PGA, PGV, and PSA (5% damping) for the horizontal componenet of ground motion records in bedrock</p>', unsafe_allow_html=True)
 
 st.sidebar.title('Define your input')
 
