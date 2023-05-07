@@ -12,9 +12,9 @@ def model():
     models=pickle.load(open(f'All_targets.sav', 'rb'))
     return models
        
-st.title("""Ground motion model 
+st.title("""Backbone Ground Motion Model for Azores Plateau (KMSCL23)
 This app predicts the 
-**geometric mean of ground motion intensities** """)
+**"PGA, PGV, and Response spectra (5% damping) for the horizontal componenet of ground motion records"** """)
 
 st.sidebar.title('Define your input')
 
