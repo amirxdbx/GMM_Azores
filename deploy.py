@@ -25,9 +25,7 @@ FD = st.sidebar.slider("Focal Depth",min_value=5.0, value=10.0,max_value=17.3,st
     
 x=pd.DataFrame({'Mw':[Mw],'RJB':[RJB],'Focal Depth':[FD]})
 st.title('Summary of your inputs:')
-st.write('Mw= '+ str(x.Mw[0]))
-st.write('RJB= '+ str(x.RJB[0])+ ' km')
-st.write('Focal Depth= '+ str(x['Focal Depth'][0])+ ' km')
+st.write('Mw= '+ str(x.Mw[0])+'; RJB= '+ str(x.RJB[0])+ ' km'+ '; Focal Depth= '+ str(x['Focal Depth'][0])+ ' km')
 
 st.sidebar.image("logo.png",width=120)
 st.sidebar.markdown("Made by [Amirhossein Mohammadi](https://www.linkedin.com/in/amir-hossein-mohammadi-86729957/)")
