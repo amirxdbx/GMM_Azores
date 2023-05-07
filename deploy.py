@@ -36,7 +36,7 @@ st.title('Outputs:')
 models=model()
 PGA=np.exp(models.predict(x)[0][0])
 PGV=np.exp(models.predict(x)[0][1])
-st.text('PGA= '+ str(np.round(PGA,2)) +'$\ (cm/s^2)$')
+st.text('PGA= '+ str(np.round(PGA,2)) +' (cm/s^2)')
 st.text('PGV= '+ str(np.round(PGV,2)) +'  cm/s')
 
 PSAs=np.exp(models.predict(x)[0][2:])
