@@ -5,7 +5,7 @@ import streamlit as st
 import pickle
 import os
 
-st.markdown(""" <style> .font {font-size:20px ; font-family: 'Cooper Black'; color: #FFFFFF;} 
+st.markdown(""" <style> .font {font-size:20px ; font-family: 'Cooper Black'; color: #000000;} 
 </style> """, unsafe_allow_html=True)
 
 @st.cache(allow_output_mutation=True)
