@@ -5,17 +5,9 @@ import streamlit as st
 import pickle
 import os
 
-m=st.markdown(“””
-
-<style>
-
-div.stp {
-
-font-size:40px;
-
-}
-
-</style>”””,unsafe_allow_html=True)
+st.markdown(""" <style> .font {font-size:50px ; font-family: 'Cooper Black'; color: #FF9633;} 
+</style> """, unsafe_allow_html=True)
+st.markdown('<p class="font">Guess the object Names</p>', unsafe_allow_html=True)
 
 @st.cache(allow_output_mutation=True)
 
